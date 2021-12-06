@@ -6,7 +6,7 @@ function createTimeBlock(time,hour)
 {
     var got = String( localStorage.getItem(time));
     var now = moment().format("H");
-    console.log(now);
+    
     var output = $(`
     <li id="${time}" class="row time-block ${hour < now? "past":(hour > now?"future":"present")}">
           <div class="hour">
